@@ -11,8 +11,13 @@ import MyWatched from './components/WatchAgain';
 
 
 function App() {
+  const appStyle = {
+    backgroundColor: "#221f1f",
+    height: "100vh",
+  };
+
   return (
-    <div className="App">
+    <div className="App" style={appStyle}>
       <Container fluid className='px-4'>
         <header>
           <MyNavbar />
@@ -20,8 +25,8 @@ function App() {
         <main>
           <MyGenres />
           <MyTrending />
-          <MyNew />
           <MyWatched />
+          <MyNew />
         </main>
         <footer>
           <MyFooter />

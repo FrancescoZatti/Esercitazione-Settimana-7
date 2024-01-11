@@ -4,7 +4,7 @@ import { Col } from "react-bootstrap";
 const CardImg = ({movies}) => {
 
     return (
-        <div>
+        <div className="d-flex">
             {movies.map((movie) => 
                 <Col className="mb-2 px-1">
                     <img className="img-fluid" src={movie} alt="movie picture" />
