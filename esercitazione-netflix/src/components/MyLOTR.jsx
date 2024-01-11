@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'react-bootstrap';
-import CardImg from '../components/CardImg';
+import { Container } from 'react-bootstrap';
+import CardImg from './CardImg';
 import { Key, LOTR } from '../data';
 
 
 
-export default class MyTrending extends Component {
+export default class MyLOTR extends Component {
 
   state = {
     movies: [],
@@ -23,7 +23,7 @@ render() {
   return (
     <div>
       <h4 className='px-4 text-light'>Lord of the Rings</h4>
-      <Container fluid className="mb-4 no-gutters text-center px-5">
+      <Container fluid className="mb-4 no-gutters text-center px-3">
         <div>
            <CardImg movies={this.state.movies} />
         </div>

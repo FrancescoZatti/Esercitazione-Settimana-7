@@ -5,15 +5,16 @@ import MyGenres from './components/Genres';
 import MyFooter from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
-import MyTrending from './components/TrendingNow';
-import MyNew from './components/New';
-import MyWatched from './components/WatchAgain';
+import MyLOTR from './components/MyLOTR';
+import MyNew from './components/MyHarryPotter';
+import MyStarWars from './components/MyStarWars';
+import MyHarryPotter from './components/MyHarryPotter';
 
 
 function App() {
   const appStyle = {
     backgroundColor: "#221f1f",
-    height: "100vh",
+    height: "100%",
   };
 
   return (
@@ -24,9 +25,9 @@ function App() {
         </header>
         <main>
           <MyGenres />
-          <MyTrending />
-          <MyWatched />
-          <MyNew />
+          <MyLOTR />
+          <MyStarWars />
+          <MyHarryPotter />
         </main>
         <footer>
           <MyFooter />
