@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Carousel, Container } from 'react-bootstrap';
 import CardImg from './CardImg';
 import { Key, LOTR } from '../data';
 

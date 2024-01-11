@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { CarouselItem, Col } from "react-bootstrap";
 
 const CardImg = ({movies}) => {
     let imgStyle = {
