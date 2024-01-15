@@ -5,21 +5,15 @@ import Logo from "../assets/logo.png";
 import { FaSearch, FaBell, FaUser } from "react-icons/fa";
 
 const MyNavbar = () => {
-  const [expanded, setExpanded] = useState(false);
- 
-
-  const handleToggle = () => setExpanded(!expanded);
-
- 
-
+  
   return (
     <Navbar expand="lg" variant="dark" className="justify-content-between align-items-center">
       <Navbar.Brand href="#" as={Link} to="/">
         <img src={Logo} alt="Logo" style={{ width: "100px", height: "55px" }} />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
-      <Navbar.Collapse id="basic-navbar-nav" className={expanded ? "show" : ""}>
-        <Col lg={expanded ? "auto" : 12} className="d-flex justify-content-between align-items-center">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav" >
+        <Col className="d-flex justify-content-between align-items-center">
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link href="#">TV Shows</Nav.Link>
