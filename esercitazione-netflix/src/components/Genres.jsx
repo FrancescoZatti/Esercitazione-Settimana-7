@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Dropdown } from "react-bootstrap";
 import { FaThLarge, FaTh } from "react-icons/fa";
 
 const MyGenres = () => {
+
+  const [selectedOption, setSelectedOption] = useState("Fantasy");
+
+    const handleOptionSelect = (option) => {
+        setSelectedOption(option);
+    };
 
   return (
     <Container fluid>
@@ -13,12 +19,48 @@ const MyGenres = () => {
         </div>
         <Dropdown className="ml-4 mt-1 ms-4">
           <Dropdown.Toggle variant="secondary" size="sm" className="rounded-0" style={{ backgroundColor: "#221f1f" }}>
-            Genres &nbsp;
+            {selectedOption}
           </Dropdown.Toggle>
           <Dropdown.Menu className="bg-dark">
-            <Dropdown.Item className="text-white bg-dark">Comedy</Dropdown.Item>
-            <Dropdown.Item className="text-white bg-dark">Drama</Dropdown.Item>
-            <Dropdown.Item className="text-white bg-dark">Thriller</Dropdown.Item>
+          <Dropdown.Item
+                  href="#/action-1"
+                  className="text-light"
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = 'grey';
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = '';
+                  }}
+                  onClick={() => handleOptionSelect("Fantasy")}
+                >
+                  Fantasy
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-2"
+                  className="text-light"
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = 'grey';
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = '';
+                  }}
+                  onClick={() => handleOptionSelect("Drama")}
+                >
+                  Drama
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-3"
+                  className="text-light"
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = 'grey';
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = '';
+                  }}
+                  onClick={() => handleOptionSelect("Thriller")}
+                >
+                  Thriller
+                </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>
